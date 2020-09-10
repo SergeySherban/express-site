@@ -1,0 +1,22 @@
+extends header
+
+block content
+    .container.contacts
+        .row
+            h1.contact-us= title
+        .row
+            .col-md-6
+                form(method="post")
+                    .form-group
+                        label(for='email') Email address
+                        input#email.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter email' name="email")
+                    .form-group
+                        label(for='message') Your message
+                        textarea#message.form-control(rows='10' name="massege")
+                    button.btn.btn-primary(type='submit') Submit
+            .col-md-6
+                .our-contacts
+                    p Our Contact
+                    p='Phone: ' + contacts.phone
+                    p='Email: ' + contacts.email
+                    p='Address: ' + contacts.address
